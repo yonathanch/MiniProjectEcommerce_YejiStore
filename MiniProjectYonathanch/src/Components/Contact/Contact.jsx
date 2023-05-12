@@ -3,8 +3,63 @@ import contact from '../../../public/assets/Contact/letter.png'
 import Input from '../../Elements/Input/Input'
 import Label from '../../Elements/Label/Label'
 import Textarea from '../../Elements/Textarea/Textarea'
+// import { GetContactList } from '../ContactList/ContactList'
+// import { addItem } from '../Redux/actions'
+
+
+// const ADD_CONTACTUS = gql`
+// mutation MyQuery($object: Contactus_insert_input!){
+//     insert_Contactus_one(object: $object){
+//         id
+//         name
+//         numberphone
+//         emailaddres
+//         message    
+//     }
+// }
+// `
 
 const Contact = () => {
+//     const [insertContactus] = useMutation(ADD_CONTACTUS, {
+//         refetchQueries: [GetContactList]
+//     })
+
+//     const [name, setName] = useState('');
+//     const [numberphone, setNumberphone] = useState('');
+//     const [emailaddres, setEmailaddres] = useState('');
+//     const [message, setMessage] = useState('');
+
+//     const onSubmit = (e) => {
+//         e.preventDefault();
+//         const item = {
+//         id: ,
+//         name,
+//         numberphone,
+//         emailaddres,
+//         message,
+//         };
+//         dispatch(addItem(item));
+//         setName("");
+//         setNumberphone("");
+//         setEmailaddres("");
+//         setMessage("");
+//         //trigger mutation
+//         insertProduct({
+//             variables:{
+//             object: {
+//                 id: 102,
+//                 Product_name: product.productName,
+//                 Product_category: product.productCategory,
+//                 Product_freshness: product.productFreshness,
+//                 Additional_information: product.addDescription,
+//                 Price: product.productPrice
+//             }
+//         }
+            
+//         })
+
+//     };
+   
     return(
         <>
              <div>
@@ -34,6 +89,20 @@ const Contact = () => {
                                             placeholder={'lorem'}     
                                         />
                                     </div>
+                                    <div className="mb-3">
+                                        <Label 
+                                            htmlFor="exampleForm"
+                                            classLabel={'form-label'}
+                                            label={'Number Phone'}
+                                        />   
+                                        <Input
+                                            type={'text'}
+                                            classInput={'form-control'}
+                                            id={'exampleForm'}
+                                            placeholder={'+62'}     
+                                        />
+                                    </div>
+
 
                                     <div className="mb-3">
                                         <Label 
@@ -61,7 +130,7 @@ const Contact = () => {
                                             id={'additional'}      
                                         />  
                                     </div>
-                                    <button type="submit" className="btn btn-secondary">Send Message</button>
+                                    <button type="submit" onClick={onsubmit} className="btn btn-secondary">Send Message</button>
                             </form>
                         </div>
                     </div>
