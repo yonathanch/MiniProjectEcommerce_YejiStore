@@ -1,0 +1,12 @@
+/* Navbar */
+.navbar-nav li a{
+    font-size: 18px;
+  }
+  .navbar-brand{
+    letter-spacing: 2px;
+  }
+
+  #navbar{
+    background-color: rgb(219, 0, 0);
+    color: rgb(21, 15, 6);
+  }
